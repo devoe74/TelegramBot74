@@ -47,12 +47,12 @@ public class Bot74 extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "devoe74bot";
+        return "";
     }
 
     @Override
     public String getBotToken() {
-        return "6282290401:AAGbfF1GaHThUmGUyZMJr3ylTz8n7LmvMl4";
+        return "";
     }
 
     @Override
