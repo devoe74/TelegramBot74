@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class Main {
-    public static final String BOT_VERSION = "2.6.4";
+    public static final String BOT_VERSION = "2.6.5";
 
     public static void main(String[] args) throws IOException, UnirestException, URISyntaxException {
 

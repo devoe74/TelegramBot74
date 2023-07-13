@@ -153,7 +153,6 @@ public class ObjectMapper {
         }
 
         CountryModel countryModel = objectMapper.readValue(jsonToCountry, CountryModel.class);
-        countryModel.setLanguage((jsonToCountry.substring((jsonToCountry.indexOf(",\"languages\":") + 11), jsonToCountry.indexOf(",\"languages\":") + 120)));
 
         if (countryModel.getName() == null) {
             return "null";

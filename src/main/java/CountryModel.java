@@ -7,11 +7,11 @@ import java.util.List;
         private String nativeName;
         private String capital;
         private int population;
-        private String language;
         private String alpha2Code;
         private String alpha3Code;
         private double area;
         private List<String> borders;
+        private List<Language> languages;
 
 
         public String getName() {
@@ -39,26 +39,12 @@ import java.util.List;
         public void setPopulation(int population) {
             this.population = population;
         }
-        public String getBorders() {
-            StringBuilder toReturn = new StringBuilder();
-            for (String border : this.borders) {
-                toReturn.append(border).append(", ");
-            }
-            return String.valueOf(toReturn);
+        public List<Language> getLanguages() {
+            return languages;
         }
-        public void setBorders(List<String> borders) {
-            this.borders = borders;
+        public void setLanguages(List<Language> languages) {
+            this.languages = languages;
         }
-        public String getLanguage() {
-            return language;
-        }
-
-        public void setLanguage(String textToExtractLanguageFrom) {
-            String name = textToExtractLanguageFrom.substring((textToExtractLanguageFrom.indexOf(",\"name\":") + 9) , (textToExtractLanguageFrom.indexOf(",\"native") - 1));
-            String nativeName = textToExtractLanguageFrom.substring((textToExtractLanguageFrom.indexOf(",\"nativeName\":") +15) , (textToExtractLanguageFrom.indexOf("\"}")));
-            this.language = name + ", " + nativeName;
-        }
-
         public String getAlpha2Code() {
             return alpha2Code;
         }
@@ -82,12 +68,24 @@ import java.util.List;
         public void setArea(double area) {
             this.area = area;
         }
+        public String getBorders() {
+            StringBuilder toReturn = new StringBuilder();
+            for (String border : this.borders) {
+                toReturn.append(border).append(", ");
+            }
+            return String.valueOf(toReturn);
+        }
+        public void setBorders(List<String> borders) {
+            this.borders = borders;
+        }
+
+
 
         public String[] getFullInformationAboutCountry(){
             return new String[]{"name: " + this.name
                     , "native name: " + this.nativeName
                     , "capital: " + this.capital
-                    , "language: " + this.language
+                    , "language: " + this.languages
                     , "population: " + this.population
                     , "area: " + this.area
                     , "alpha 2 Code: " + this.alpha2Code
