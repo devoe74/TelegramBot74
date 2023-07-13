@@ -96,7 +96,7 @@ public class Bot74 extends TelegramLongPollingBot {
                      + "type anything to start"
             );
 
-            if (chatId == 766725887){
+            if (chatId == Main.ADMIN_ID){
                 sendMessage.setText("welcome back my lord"); // XD
             }
 
@@ -114,7 +114,7 @@ public class Bot74 extends TelegramLongPollingBot {
                     users.get(chatId).setPhase(3);
                 }
 
-                if (chatId == 766725887L){
+                if (chatId == Main.ADMIN_ID){
                     if (textMessageData.toLowerCase().contains(ADMIN_THINGS[0])){
                         long cidTs = Long.parseLong(textMessageData.substring(10));
                         if (users.containsKey(cidTs)){

@@ -1,5 +1,7 @@
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JokeAPI {
 
@@ -8,8 +10,6 @@ public class JokeAPI {
     private String joke;
     private String setup;
     private String delivery;
-
-
 
     public void setCategory(String category) {
         this.category = category;

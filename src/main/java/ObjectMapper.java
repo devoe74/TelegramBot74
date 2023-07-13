@@ -23,7 +23,7 @@ public class ObjectMapper {
         HttpResponse<String> response;
 
         if (ChoicesPanel.isJocksSafe()){
-            response = Unirest.get("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw").asString();
+            response = Unirest.get("https://v2.jokeapi.dev/joke/Any?safe-mode").asString();
         }
         else {
             response = Unirest.get("https://v2.jokeapi.dev/joke/Any").asString();
@@ -38,6 +38,7 @@ public class ObjectMapper {
         if (jokeAPI.getJokeText() != null || jokeAPI.getSetup() != null){
             if (jokeAPI.getJokeText() != null){
                 return jokeAPI.getJokeText();
+
             }
             else {
                 return jokeAPI.getSetup() + "\n" + jokeAPI.getDelivery();
