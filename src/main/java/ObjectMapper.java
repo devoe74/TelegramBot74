@@ -7,6 +7,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Random;
 
+// להפוך למחלקה גנרית שהרי יש המון כפילויות
 public class ObjectMapper {
 
     HarryPotterAPI harryPotterAPI;

@@ -739,7 +739,6 @@ public class Bot74 extends TelegramLongPollingBot {
 
 
             String[] imBoredAPIButtons = new String[]{"random" , "by category"};
-            List<String> types = List.of("education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork");
             if (users.get(chatId).getPhase() == 54){
 
                 sendMessage.setText("choose an option:");
